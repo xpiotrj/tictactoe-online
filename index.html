@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/main.css">
+    <script src="https://cdn.socket.io/4.5.4/socket.io.min.js"></script>
+    <script src="/data.js"></script>
+    <script src="/lobby.js"></script>
+    <title>Document</title>  
+</head>
+<body>
+    <div id="lobby_menu">
+        id: <input type="text" name="" id="id_text"> 
+        <input type="button" id="join_btn" value="join">
+        <br>
+        <input type="button" id="create_btn" value="create">
+    </div>
+    <div id="game">
+        <div id="counter">Player 1 (O): 0 | Player 2 (X): 0</div>
+        <div id="board">
+            <div class="tile" data-index="0">
+                <button></button>
+            </div>
+            <div class="tile" data-index="1">
+                <button></button>
+            </div>
+            <div class="tile" data-index="2">
+                <button></button>
+            </div>
+            <div class="tile" data-index="3">
+                <button></button>
+            </div>
+            <div class="tile" data-index="4">
+                <button></button>
+            </div>
+            <div class="tile" data-index="5">
+                <button></button>
+            </div>
+            <div class="tile" data-index="6">
+                <button></button>
+            </div>
+            <div class="tile" data-index="7">
+                <button></button>
+            </div>
+            <div class="tile" data-index="8">
+                <button></button>
+            </div>
+        </div>
+
+        <div id="line"></div>
+        <div id="turn_info">ddd</div>
+        <button id="restart">restart</button>
+    </div>
+</body>
+</html>
