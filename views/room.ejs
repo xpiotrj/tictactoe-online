@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/main.css">
+    <script>
+        const ROOM_ID = '<%= roomID %>';
+    </script>
+    <script src="/socket.io/socket.io.js" defer></script>
+    <script src="main.js" defer></script>
+    <script src="https://kit.fontawesome.com/aab2c8472b.js" crossorigin="anonymous"></script>
+    <script src="front.js" defer></script>
+    <script src="chat.js" defer></script>
+</head>
+<body>
+    <div id="lobby">
+        <div class="player" id="player">
+            <input type="text" name="" id="username_text" placeholder="Player#425">
+            <input type="button" id="ready_btn" value="ready">
+            <div id="ready_state">not ready</div>
+        </div>
+        <div class="vs">vs.</div>
+        <div class="player" id="enemy">
+            <div id='loader' class="loader"></div>
+            <div id="enemy_name"></div>
+        </div>
+        
+    </div>
+    <div id="game">
+        <div id="board">
+            <div class="tile" data-index="0">
+                <button></button>
+            </div>
+            <div class="tile" data-index="1">
+                <button></button>
+            </div>
+            <div class="tile" data-index="2">
+                <button></button>
+            </div>
+            <div class="tile" data-index="3">
+                <button></button>
+            </div>
+            <div class="tile" data-index="4">
+                <button></button>
+            </div>
+            <div class="tile" data-index="5">
+                <button></button>
+            </div>
+            <div class="tile" data-index="6">
+                <button></button>
+            </div>
+            <div class="tile" data-index="7">
+                <button></button>
+            </div>
+            <div class="tile" data-index="8">
+                <button></button>
+            </div>
+        </div>
+        <div id="line"></div>
+            <div id="dashboard">
+                <div id="counter">
+                    <div class="counter-small">Ty</div>
+                    <div class="counter-small"></div>
+                    <div id="player_counter"></div>
+                    <div id="enemy_counter"></div>
+                </div>          
+                <div id="turn_info">test</div>
+                
+            </div>
+            <input type="button" id="rematch_btn" value="rematch">
+            <input type="button" value="stats" id="show_stats_btn">
+    </div>
+    <div id="chat">
+        <div class="messages-container"></div>
+        <input type="text" id="message-text" placeholder="Type here">
+        <button id="send-message-btn">send</button>
+    </div>
+    <div id="stats">
+        <input type="button" id="close_stats_btn" value="X" style="position: absolute; right: 0;">
+        <h1>stats:</h1>
+        <table>
+            <tr>
+                <th>win</th>
+                <th>tie</th>
+                <th>lost</th>
+            </tr>
+            <tr>
+                <td id="t_wins"></td>
+                <td id="t_ties"></td>
+                <td id="t_lost"></td>
+            </tr>
+        </table>
+        <span id="win_prec_span"></span>
+        <h2>Games history: </h2>
+        <div id="games_played">
+            
+        </div>      
+    </div>  
+</body>
+</html>
